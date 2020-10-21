@@ -1,20 +1,21 @@
 import Link from 'next/link';
+import { Icon } from 'react-icons-kit';
+import { th } from 'react-icons-kit/fa/th';
 import {
   Header as HeaderComponent,
   Title,
   Logo,
   Subtitle,
   Grow,
+  MobileMenuButton,
 } from './styles';
 
 function Header() {
   return (
     <HeaderComponent>
-      {/* <Button className="button-icon" onClick={() => switchMenu()}>
-        <div>
-          <Icon size={30} icon={th} />
-        </div>
-      </Button> */}
+      <MobileMenuButton>
+        <Icon size={28} icon={th} />
+      </MobileMenuButton>
       <Link href="/">
         <Title>SERIALKIN</Title>
       </Link>

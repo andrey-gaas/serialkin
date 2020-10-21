@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { MD } from '../../constants/media';
 
 export const Header = styled.header`
   display: flex;
@@ -17,22 +18,47 @@ export const Title = styled.a`
 `;
 
 export const Logo = styled.div`
-  margin-left: 10px;
-  margin-top: 3px;
-  width: 50px;
-  height: 50px;
-  background-image: url('/images/logo.png');
-  background-size: 50px;
+  display: none;
+
+  @media ${MD} {
+    display: block;
+    margin-left: 10px;
+    margin-top: 3px;
+    width: 50px;
+    height: 50px;
+    background-image: url('/images/logo.png');
+    background-size: 50px;
+  }
 `;
 
 export const Subtitle = styled.span`
-  margin-left: 14px;
-  font-size: 24px;
-  line-height: 24px;
-  color: #fff;
-  text-transform: uppercase;
+  display: none;
+
+  @media ${MD} {
+    display: block;
+    margin-left: 14px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #fff;
+    text-transform: uppercase;
+  }
 `;
 
 export const Grow = styled.div`
   flex-grow: 1;
+`;
+
+export const MobileMenuButton = styled.button`
+  margin-top: 3px;
+  padding: 0;
+  margin-right: 20px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  @media ${MD} {
+    display: none;
+  }
 `;
