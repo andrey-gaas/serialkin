@@ -3,13 +3,10 @@ import styled from 'styled-components';
 import { MD } from '../../constants/media';
 
 const StyledContainer = styled.div`
-  margin: 30px 15px;
-  background: red;
-  height: 100px;
-
-  @media ${MD} {
-    margin: 30px;
-  }
+  display: flex;
+  align-items: flex-start;
+  background-color: #ededed;
+  height: 100%;
 `;
 
 function Container({ children }) {
