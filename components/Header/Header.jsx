@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { Icon } from 'react-icons-kit';
 import { th } from 'react-icons-kit/fa/th';
@@ -11,10 +10,10 @@ import {
   MobileMenuButton,
 } from './styles';
 
-function Header({ switchMenu }) {
+function Header() {
   return (
     <HeaderComponent>
-      <MobileMenuButton onClick={switchMenu}>
+      <MobileMenuButton>
         <Icon size={28} icon={th} />
       </MobileMenuButton>
       <Link href="/">
@@ -31,9 +30,5 @@ function Header({ switchMenu }) {
 
   );
 }
-
-Header.propTypes = {
-  switchMenu: PropTypes.func.isRequired,
-};
 
 export default Header;
