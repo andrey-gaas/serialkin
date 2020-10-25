@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { MD } from '../../constants/media';
 
 const StyledContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  background-color: #ededed;
   height: 100%;
 `;
 

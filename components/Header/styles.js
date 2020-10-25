@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { LIGHT_PRIMARY_COLOR } from '../../constants/styles';
 
 export const Header = styled.header`
   display: flex;
   align-items: center;
   padding: 10px 30px;
-  background: url('/images/backgrounds/header.png') top center repeat-x #2a3e52;
+  background: ${LIGHT_PRIMARY_COLOR};
   z-index: 999999;
 
   @media (max-width: 989px) {
