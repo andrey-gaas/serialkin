@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { LIGHT_PRIMARY_COLOR } from '../../constants/styles';
+import { LIGHT_PRIMARY_COLOR, SECONDARY_COLOR } from '../../constants/styles';
 
 export const Header = styled.header`
   display: flex;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px 0;
   background: ${LIGHT_PRIMARY_COLOR};
   z-index: 999999;
 
@@ -16,28 +16,17 @@ export const Header = styled.header`
   }
 `;
 
-export const MobileMenuButton = styled.button`
-  margin-top: 3px;
-  background: none;
-  box-shadow: none;
-  border: none;
-  outline: none;
-  color: #fff;
-
-  &:active {
-    box-shadow: none;
-    color: #6c98c3;
-  }
-
-  @media (min-width: 990px) {
-    display: none;
-  }
+export const InnerContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
-export const Title = styled.a`
+export const Title = styled.h6`
+  margin: 0;
   font-family: "Exo 2";
   font-size: 30px;
   line-height: 30px;
+  font-weight: normal;
   text-decoration: none;
   color: #fff;
 
@@ -73,4 +62,14 @@ export const Subtitle = styled.span`
 
 export const Grow = styled.div`
   flex-grow: 1;
+`;
+
+export const MenuLink = styled.a`
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: ${SECONDARY_COLOR}
+  }
 `;
