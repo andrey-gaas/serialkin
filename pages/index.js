@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Header } from '../components';
+import { Header, Container, Card } from '../components';
 
 function Home() {
   return (
@@ -11,6 +11,13 @@ function Home() {
         <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans:400,700&display=swap" rel="stylesheet" />
       </Head>
       <Header />
+
+      <Container>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </Container>
     </>
   );
 }
