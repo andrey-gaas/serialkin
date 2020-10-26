@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Container } from '@material-ui/core';
+import { Container } from '../index';
 import {
   Header as HeaderComponent,
   Title,
@@ -13,7 +13,7 @@ import {
 function Header() {
   return (
     <HeaderComponent>
-      <Container>
+      <Container withoutMargin>
         <InnerContainer>
           <Title>SERIALKIN</Title>
           <Logo />

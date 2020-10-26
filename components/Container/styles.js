@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Root = styled.div`
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: ${props => props.withoutMargin ? 0 : '20px'};
+  margin-bottom: ${props => props.withoutMargin ? 0 : '20px'};
   width: 100%;
   display: block;
   box-sizing: border-box;
