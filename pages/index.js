@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import Head from 'next/head';
-import { Header, Container } from '../components';
+import { Header } from '../components';
 
 function Home() {
-
   return (
     <>
       <Head>
