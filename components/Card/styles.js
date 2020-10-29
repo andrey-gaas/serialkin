@@ -8,15 +8,18 @@ export const Root = styled.div`
   background: ${LIGHT_PRIMARY_COLOR};
   cursor: pointer;
   transition: .3s;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   
   @media (min-width: 990px) {
+    border: 1px solid #000;
     flex-direction: row;
     margin: 20px 1%;
     width: 48%;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 `;
 

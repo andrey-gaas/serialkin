@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>asdasd</title>
+        <title>Serialkin | Сериалы онлайн смотреть</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans:400,700&display=swap" rel="stylesheet" />
