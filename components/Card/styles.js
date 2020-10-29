@@ -3,7 +3,8 @@ import { LIGHT_PRIMARY_COLOR, SECONDARY_COLOR } from '../../constants/styles';
 
 export const Root = styled.div`
   display: flex;
-  margin-top: 20px;
+  flex-direction: column;
+  margin-top: 40px;
   background: ${LIGHT_PRIMARY_COLOR};
   cursor: pointer;
   transition: .3s;
@@ -13,14 +14,19 @@ export const Root = styled.div`
   }
   
   @media (min-width: 990px) {
+    flex-direction: row;
     margin: 20px 1%;
     width: 48%;
   }
 `;
 
 export const Image = styled.img`
-  width: 50%;
+  width: 100%;
   object-fit: cover;
+
+  @media (min-width: 990px) {
+    width: 50%;
+  }
 `;
 
 export const Content = styled.div`
@@ -31,11 +37,16 @@ export const Title = styled.h2`
   margin: 0;
   font-weight: normal;
   font-size: 22px;
+  text-align: center;
   color: #fff;
   transition: .3s;
 
   &:hover {
     color: ${SECONDARY_COLOR};
+  }
+
+  @media (min-width: 990px) {
+    text-align: left;
   }
 `;
 

@@ -6,7 +6,7 @@ function Card() {
     <Root>
       <Image src="/images/posters/the-boys.jpg" />
       <Content>
-        <Title>Пацаны</Title>
+        <Title>Игра пристолов игра пристолов</Title>
         <TextContainer>
           <Text>Сезонов:</Text>
           <Text marginLeft>2</Text>
