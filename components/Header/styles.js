@@ -19,6 +19,7 @@ export const Header = styled.header`
 export const InnerContainer = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
 `;
 
 export const Title = styled.h6`
@@ -65,11 +66,29 @@ export const Grow = styled.div`
 `;
 
 export const MenuLink = styled.a`
+  display: none;
   color: #fff;
   cursor: pointer;
   transition: 0.3s;
 
   &:hover {
     color: ${SECONDARY_COLOR}
+  }
+
+  @media (min-width: 990px) {
+    display: block;
+  }
+`;
+
+export const MobileLink = styled.button`
+  display: block;
+  margin-right: 15px;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: none;
+
+  @media (min-width: 990px) {
+    display: none;
   }
 `;

@@ -12,7 +12,7 @@ function Home() {
       </Head>
       <Header />
 
-      <Container row={true}>
+      <Container>
         <Card
           image="/images/posters/the-boys.jpg"
           title="Пацаны"

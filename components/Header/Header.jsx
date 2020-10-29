@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { Icon } from 'react-icons-kit';
+import { home } from 'react-icons-kit/fa/home';
 import { Container } from '../index';
 import {
   Header as HeaderComponent,
@@ -8,6 +10,7 @@ import {
   InnerContainer,
   Grow,
   MenuLink,
+  MobileLink,
 } from './styles';
 
 function Header() {
@@ -23,6 +26,11 @@ function Header() {
             <MenuLink>
               Главная страница
             </MenuLink>
+          </Link>
+          <Link href="/">
+            <MobileLink>
+              <Icon icon={home} size={24} />
+            </MobileLink>
           </Link>
         </InnerContainer>
       </Container>
