@@ -12,11 +12,28 @@ function Home() {
       </Head>
       <Header />
 
-      <Container>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <Container row={true}>
+        <Card
+          image="/images/posters/the-boys.jpg"
+          title="Пацаны"
+          seasons={2}
+          year={2018}
+          status="Идет"
+        />
+        <Card
+          image="/images/posters/peaky_blinders.jpg"
+          title="Острые козырьки"
+          seasons={7}
+          year={2013}
+          status="Идет"
+        />
+        <Card
+          image="/images/posters/vikings.jpg"
+          title="Викинги"
+          seasons={6}
+          year={2013}
+          status="Идет"
+        />
       </Container>
     </>
   );

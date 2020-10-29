@@ -1,29 +1,35 @@
 import PropTypes from 'prop-types';
 import { Root, Image, Content, Title, TextContainer, Text } from './styles';
 
-function Card() {
+function Card({ image, title, seasons, year, status }) {
   return (
     <Root>
-      <Image src="/images/posters/the-boys.jpg" />
+      <Image src={image} />
       <Content>
-        <Title>Игра пристолов игра пристолов</Title>
+        <Title>{title}</Title>
         <TextContainer>
           <Text>Сезонов:</Text>
-          <Text marginLeft>2</Text>
+          <Text marginLeft>{seasons}</Text>
         </TextContainer>
         <TextContainer>
-          <Text>Год выхода:</Text>
-          <Text marginLeft>2018</Text>
+          <Text>Год:</Text>
+          <Text marginLeft>{year}</Text>
         </TextContainer>
         <TextContainer>
           <Text>Статус:</Text>
-          <Text marginLeft>Идет</Text>
+          <Text marginLeft>{status}</Text>
         </TextContainer>
       </Content>
     </Root>
   );
 }
 
-Card.propTypes = {};
+Card.propTypes = {
+  image:   PropTypes.string.isRequired,
+  title:   PropTypes.string.isRequired,
+  seasons: PropTypes.number.isRequired,
+  year:    PropTypes.number.isRequired,
+  status:  PropTypes.string.isRequired,
+};
 
-export default Card
+export default Card;

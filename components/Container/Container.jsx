@@ -8,7 +8,11 @@ function Container({ children, withoutMargin }) {
 }
 
 Container.propTypes = {
-  withoutMargin: PropTypes.bool.isRequired,
+  withoutMargin: PropTypes.bool,
+};
+
+Container.defaultProps = {
+  withoutMargin: false,
 };
 
 export default Container;

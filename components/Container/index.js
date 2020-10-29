@@ -1,16 +1,7 @@
-import PropTypes from 'prop-types';
 import ContainerComponent from './Container';
 
-function Container({ children, withoutMargin }) {
-  return <ContainerComponent withoutMargin={withoutMargin} children={children} />;
+function Container(props) {
+  return <ContainerComponent {...props} />;
 }
-
-Container.propTypes = {
-  withoutMargin: PropTypes.bool,
-};
-
-Container.defaultProps = {
-  withoutMargin: false,
-};
 
 export default Container;

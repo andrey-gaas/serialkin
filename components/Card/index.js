@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import CardComponent from './Card';
 
-function Card({}) {
+function Card(props) {
   return (
-    <CardComponent />
+    <CardComponent {...props} />
   );
 }
 
