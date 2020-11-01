@@ -1,7 +1,9 @@
 import Head from 'next/head';
-import { Header, Container, Card } from '../components';
+import fetch from 'node-fetch';
+import { Header } from '../components';
+import { Home as HomeComponent } from '../views';
 
-function Home() {
+function Home({ serials }) {
   return (
     <>
       <Head>
@@ -11,32 +13,19 @@ function Home() {
         <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans:400,700&display=swap" rel="stylesheet" />
       </Head>
       <Header />
-
-      <Container>
-        <Card
-          image="/images/posters/the-boys.jpg"
-          title="Пацаны"
-          seasons={2}
-          year={2018}
-          status="Идет"
-        />
-        <Card
-          image="/images/posters/peaky_blinders.jpg"
-          title="Острые козырьки"
-          seasons={7}
-          year={2013}
-          status="Идет"
-        />
-        <Card
-          image="/images/posters/vikings.jpg"
-          title="Викинги"
-          seasons={6}
-          year={2013}
-          status="Идет"
-        />
-      </Container>
+      <HomeComponent serials={serials} />
     </>
   );
 }
 
 export default Home;
+
+export const getStaticProps = async ctx => {
+  const res = await fetch('http://localhost:3000/api/serials');
+  
+  return {
+    props: {
+      serials: await res.json(),
+    },
+  };
+};

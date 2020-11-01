@@ -28,7 +28,7 @@ Card.propTypes = {
   image:   PropTypes.string.isRequired,
   title:   PropTypes.string.isRequired,
   seasons: PropTypes.number.isRequired,
-  year:    PropTypes.number.isRequired,
+  year:    PropTypes.string.isRequired,
   status:  PropTypes.string.isRequired,
 };
 
