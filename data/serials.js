@@ -1,4 +1,4 @@
-const data = [
+export const serials = [
   {
     id: 0,
     title: 'Пацаны',
@@ -30,7 +30,3 @@ const data = [
     status: 'Идет',
   },
 ];
-
-export default function handler(req, res) {
-  res.json(data);
-}

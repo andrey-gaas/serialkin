@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import fetch from 'node-fetch';
+import { serials } from '../data/serials';
 import { Header } from '../components';
 import { Home as HomeComponent } from '../views';
 
-function Home({ serials }) {
+function Home() {
   return (
     <>
       <Head>
@@ -19,13 +19,3 @@ function Home({ serials }) {
 }
 
 export default Home;
-
-export const getStaticProps = async ctx => {
-  const res = await fetch('http://localhost:3000/api/serials');
-  
-  return {
-    props: {
-      serials: await res.json(),
-    },
-  };
-};
