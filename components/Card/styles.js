@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { LIGHT_PRIMARY_COLOR, SECONDARY_COLOR } from '../../constants/styles';
 
 export const Root = styled.div`
-  display: flex;
-  flex-direction: column;
   margin-top: 40px;
   background: ${LIGHT_PRIMARY_COLOR};
   cursor: pointer;
@@ -13,13 +11,21 @@ export const Root = styled.div`
   
   @media (min-width: 990px) {
     border: 1px solid #000;
-    flex-direction: row;
     margin: 20px 1%;
     width: 48%;
 
     &:hover {
       transform: scale(1.05);
     }
+  }
+`;
+
+export const LinkContainer = styled.a`
+  display: flex;
+  flex-direction: column;
+  
+  @media (min-width: 990px) {
+    flex-direction: row;
   }
 `;
 

@@ -2,7 +2,7 @@ export const serials = [
   {
     id: 0,
     title: 'Пацаны',
-    linkTitle: 'the_boys',
+    link: 'the_boys',
     image: '/images/posters/the-boys.jpg',
     seasons: 2,
     yearFrom: 2018,
@@ -12,7 +12,7 @@ export const serials = [
   {
     id: 1,
     title: 'Острые козырьки',
-    linkTitle: 'peaky_blinders',
+    link: 'peaky_blinders',
     image: '/images/posters/peaky_blinders.jpg',
     seasons: 7,
     yearFrom: 2013,
@@ -22,7 +22,7 @@ export const serials = [
   {
     id: 2,
     title: 'Викинги',
-    linkTitle: 'vikings',
+    link: 'vikings',
     image: '/images/posters/vikings.jpg',
     seasons: 6,
     yearFrom: 2013,

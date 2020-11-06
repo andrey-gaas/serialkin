@@ -14,6 +14,7 @@ function Home({ serials }) {
               seasons={serial.seasons}
               year={`${serial.yearFrom}${serial.yearTo ? ` - ${serial.yearTo}` : ''}`}
               status={serial.status}
+              link={serial.link}
             />
           )
         )
