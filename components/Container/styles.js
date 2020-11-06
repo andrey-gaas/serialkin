@@ -4,8 +4,6 @@ export const Root = styled.div`
   margin-top: ${props => props.withoutMargin ? 0 : '20px'};
   margin-bottom: ${props => props.withoutMargin ? 0 : '20px'};
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
