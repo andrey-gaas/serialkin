@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { serials } from '../data/serials';
-import { Header } from '../components';
+import { Layout } from '../components';
 import { Home as HomeComponent } from '../views';
 
 function Home() {
@@ -12,8 +12,9 @@ function Home() {
         <link rel="stylesheet" href="/styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans:400,700&display=swap" rel="stylesheet" />
       </Head>
-      <Header />
-      <HomeComponent serials={serials} />
+      <Layout>
+        <HomeComponent serials={serials} />
+      </Layout>
     </>
   );
 }
