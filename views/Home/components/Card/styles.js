@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { LIGHT_PRIMARY_COLOR, SECONDARY_COLOR } from '../../constants/styles';
+import { LIGHT_PRIMARY_COLOR, SECONDARY_COLOR } from '../../../../constants/styles';
 
 export const Root = styled.div`
   margin-top: 40px;

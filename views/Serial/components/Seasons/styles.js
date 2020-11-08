@@ -23,10 +23,13 @@ export const SeasonContainer = styled.article`
   font-size: 20px;
   color: #fff;
   background-color: ${LIGHT_PRIMARY_COLOR};
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   cursor: pointer;
   transition: .3s;
 
   @media (min-width: 990px) {
+    border: 1px solid #000;
     &:hover {
       transform: translateY(-5px);
     }

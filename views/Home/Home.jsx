@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Container, Card, Loader } from '../../components';
+import { Container } from '../../components';
+import { Card } from './components';
 import { Row } from './styles';
 
 function Home({ serials }) {
