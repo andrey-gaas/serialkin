@@ -13,7 +13,7 @@ function Season({ seasons }) {
 
       {
         seasons.map(season => (
-          <NextLink key={season.id} href={`/serial/${season.serialLink}/${season.season}/1`}>
+          <NextLink key={season.id} href={{ pathname: `/serial/${season.serialLink}/${season.season}`, query: { seria: 1 }}}>
             <Link>
               <SeasonContainer>
                 <Description>
