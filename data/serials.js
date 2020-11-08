@@ -16,7 +16,7 @@ export const serials = [
     link: 'peaky_blinders',
     image: '/images/posters/peaky-blinders.jpg',
     poster: '/images/posters/peaky-blinders-poster.jpg',
-    seasons: 7,
+    seasons: 6,
     yearFrom: 2013,
     yearTo: null,
     status: 'Идет',

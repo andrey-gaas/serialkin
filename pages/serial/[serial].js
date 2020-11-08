@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import { serials } from '../../data/serials';
+import { seasons as allSeasons } from '../../data/seasons';
 import { Layout } from '../../components';
 import { Serial as SerialView } from '../../views';
 
 function Serial({ serial: serialProps }) {
   const serial = serials.find(serial => serial.link === serialProps);
+
+  const seasons = allSeasons.filter(season => season.serial === serial.title);
 
   return (
     <>
@@ -15,7 +18,7 @@ function Serial({ serial: serialProps }) {
         <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans:400,700&display=swap" rel="stylesheet" />
       </Head>
       <Layout>
-        <SerialView serial={serial} />
+        <SerialView serial={serial} seasons={seasons} />
       </Layout>
     </>
   );

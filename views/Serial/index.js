@@ -18,7 +18,7 @@ function Serial({ serial, ...rest }) {
 }
 
 Serial.propTypes = {
-  serial: PropTypes.object.isRequired,
+  serial:  PropTypes.object.isRequired,
 };
 
 export default Serial;
