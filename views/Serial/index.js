@@ -14,7 +14,7 @@ function Serial({ serial, ...rest }) {
     },
   ];
 
-  return <SerialComponent breadcrumbs={breadcrumbs} {...rest} />;
+  return <SerialComponent breadcrumbs={breadcrumbs} serial={serial} {...rest} />;
 }
 
 Serial.propTypes = {

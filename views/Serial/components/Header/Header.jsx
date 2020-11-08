@@ -1,9 +1,18 @@
-import {} from './styles';
+import PropTypes from 'prop-types';
+import { Root, TitleContainer, Poster } from './styles';
 
-function Header(props) {
+function Header({ title, image }) {
   return (
-    <h1>JOPA</h1>
+    <Root>
+      <TitleContainer>{title}</TitleContainer>
+      <Poster src={image} alt={title} />
+    </Root>
   );
 }
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
 
 export default Header;

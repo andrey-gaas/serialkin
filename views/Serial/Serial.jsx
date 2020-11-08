@@ -2,17 +2,18 @@ import PropTypes from 'prop-types';
 import { Container, Breadcrumbs } from '../../components';
 import { Header } from './components';
 
-function Serial({ breadcrumbs }) {
+function Serial({ breadcrumbs, serial }) {
   return (
     <Container>
       <Breadcrumbs data={breadcrumbs} />
-      <Header />
+      <Header title={serial.title} image={serial.poster} />
     </Container>
   );
 }
 
 Serial.propTypes = {
   breadcrumbs: PropTypes.array.isRequired,
+  serial:      PropTypes.object.isRequired,
 };
 
 export default Serial;
