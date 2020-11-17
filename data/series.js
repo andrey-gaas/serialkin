@@ -13,7 +13,7 @@ export const series = [
     season: 1,
     number: 2,
     title: 'Вишенка',
-    link: '/video/olya.mp4',
+    link: '/video/plumbus.mp4',
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const series = [
     season: 1,
     number: 4,
     title: 'Самка человека',
-    link: '/video/olya.mp4',
+    link: '/video/plumbus.mp4',
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ export const series = [
     season: 1,
     number: 6,
     title: 'Невинные',
-    link: '/video/olya.mp4',
+    link: '/video/plumbus.mp4',
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ export const series = [
     season: 1,
     number: 8,
     title: 'Ты меня нашел',
-    link: '/video/olya.mp4',
+    link: '/video/plumbus.mp4',
   },
 
   {
@@ -78,7 +78,7 @@ export const series = [
     season: 2,
     number: 2,
     title: 'Должная подготовка и планирование',
-    link: '/video/olya.mp4',
+    link: '/video/plumbus.mp4',
   },
   {
     id: 10,
@@ -94,7 +94,7 @@ export const series = [
     season: 2,
     number: 4,
     title: 'Ничего подобного в мире',
-    link: '/video/olya.mp4',
+    link: '/video/plumbus.mp4',
   },
   {
     id: 12,
@@ -110,7 +110,7 @@ export const series = [
     season: 2,
     number: 6,
     title: 'Кровавые двери закрываются',
-    link: '/video/olya.mp4',
+    link: '/video/plumbus.mp4',
   },
   {
     id: 14,
@@ -126,6 +126,6 @@ export const series = [
     season: 2,
     number: 8,
     title: 'Мы не можем просто убить всех',
-    link: '/video/olya.mp4',
+    link: '/video/plumbus.mp4',
   },
 ];

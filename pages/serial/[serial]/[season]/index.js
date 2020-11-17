@@ -4,7 +4,7 @@ import { series as seriesData } from '../../../../data/series';
 import { Layout } from '../../../../components';
 import { Season as SeasonView } from '../../../../views';
 
-function Season({ serial: serialProps, season, seria }) {
+function Season({ serial: serialProps, season, seria = '1' }) {
   const serial = serials.find(serial => serial.link === serialProps);
   const series = seriesData.filter(seria => seria.serial === serial.title && seria.season === +season);
 

@@ -1,12 +1,24 @@
 import PropTypes from 'prop-types';
 import PlayerReact from 'react-player';
-import { Root, Header, PlayerContainer } from './styles';
+import Icon from 'react-icons-kit';
+import { chevronDown } from 'react-icons-kit/fa/chevronDown';
+import { chevronUp } from 'react-icons-kit/fa/chevronUp';
+import {
+  Root,
+  Header,
+  PlayerContainer,
+  SeriesContainerDesctop,
+  SeriesContainerMobile,
+  SeriesList,
+  Seria,
+  SeriaText,
+} from './styles';
 
-function Player({ serial, url }) {
+function Player({ serial, url, series, isOpenMenu, switchMenu, switchSeria }) {
   return (
     <Root>
-      <Header>{serial}</Header>
       <PlayerContainer>
+        <Header>{serial}</Header>
         <PlayerReact
           url={url}
           width="100%"
@@ -14,13 +26,64 @@ function Player({ serial, url }) {
           controls
         />
       </PlayerContainer>
+
+      <SeriesContainerDesctop>
+        <Header>
+          Список серий
+        </Header>
+        
+        <SeriesList>
+          <div>
+            {
+              series.map(seria => (
+                <Seria key={seria.id} onClick={() => switchSeria(seria.number)}>
+                  <SeriaText>Серия {seria.number}.</SeriaText>
+                  &#8195;
+                  <SeriaText>{seria.title}</SeriaText>
+                </Seria>
+              ))
+            }
+          </div>
+        </SeriesList>
+      </SeriesContainerDesctop>
+
+      <SeriesContainerMobile>
+        <Header onClick={switchMenu}>
+          Список серий
+          {
+            isOpenMenu ?
+              <Icon icon={chevronUp} /> :
+              <Icon icon={chevronDown} />
+          }
+        </Header>
+        {
+          isOpenMenu &&
+          <SeriesList>
+            <div>
+              {
+                series.map(seria => (
+                  <Seria key={seria.id} onClick={() => switchSeria(seria.number)}>
+                    <SeriaText>Серия {seria.number}.</SeriaText>
+                    &#8195;
+                    <SeriaText>{seria.title}</SeriaText>
+                  </Seria>
+                ))
+              }
+            </div>
+          </SeriesList>
+        }
+      </SeriesContainerMobile>
     </Root>
   );
 }
 
 Player.propTypes = {
-  serial: PropTypes.string.isRequired,
-  url:    PropTypes.string.isRequired,
+  serial:      PropTypes.string.isRequired,
+  series:      PropTypes.array.isRequired,
+  url:         PropTypes.string.isRequired,
+  isOpenMenu:  PropTypes.bool.isRequired,
+  switchMenu:  PropTypes.func.isRequired,
+  switchSeria: PropTypes.func.isRequired,
 };
 
 export default Player;
