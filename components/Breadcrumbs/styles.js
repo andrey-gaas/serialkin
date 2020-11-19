@@ -5,6 +5,11 @@ export const Root = styled.div`
   display: flex;
   align-items: center;
   font-size: 15px;
+  margin: 0 20px;
+
+  @media (min-width: 990px) {
+    margin: 0;
+  }
 `;
 
 export const Link = styled.a`
