@@ -13,6 +13,8 @@ function Serial({ serial: serialProps }) {
     <>
       <Head>
         <title>{serial.title} | Serialkin</title>
+        <meta name="description" content={serial.description} />
+        <meta name="keywords" content={serial.ketwords} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans:400,700&display=swap" rel="stylesheet" />

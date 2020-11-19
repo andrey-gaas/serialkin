@@ -8,6 +8,8 @@ function Home() {
     <>
       <Head>
         <title>Serialkin | Сериалы онлайн смотреть</title>
+        <meta name="description" content="Serialkin. Лучшие сериалы в высоком качестве!" />
+        <meta name="keywords" content="Serialkin, сериалкин, сериалы, сералы смотреть, сериалы онлайн, в высоком качестве, бесплатно, мультфильмы, смотреть" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans:400,700&display=swap" rel="stylesheet" />

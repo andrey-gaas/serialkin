@@ -5,6 +5,8 @@ export const seasons = [
     season: 1,
     episodes: 8,
     serialLink: 'the_boys',
+    description: 'Пацаны. 1 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'Пацаны, the boys, смотреть, онлайн, бесплатно, в хорошем качестве, 1 сезон, все сезоны',
   },
   {
     id: 1,
@@ -12,6 +14,8 @@ export const seasons = [
     season: 2,
     episodes: 8,
     serialLink: 'the_boys',
+    description: 'Пацаны. 2 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'Пацаны, the boys, смотреть, онлайн, бесплатно, в хорошем качестве, 2 сезон, все сезоны',
   },
 
   {
@@ -20,6 +24,8 @@ export const seasons = [
     season: 1,
     episodes: 6,
     serialLink: 'peaky_blinders',
+    description: 'Острые козырьки. 1 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'Острые козырьки, peaky blinders, смотреть, онлайн, бесплатно, в хорошем качестве, 1 сезон, все сезоны',
   },
   {
     id: 3,
@@ -27,6 +33,8 @@ export const seasons = [
     season: 2,
     episodes: 6,
     serialLink: 'peaky_blinders',
+    description: 'Острые козырьки. 2 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'Острые козырьки, peaky blinders, смотреть, онлайн, бесплатно, в хорошем качестве, 2 сезон, все сезоны',
   },
   {
     id: 4,
@@ -34,6 +42,8 @@ export const seasons = [
     season: 3,
     episodes: 6,
     serialLink: 'peaky_blinders',
+    description: 'Острые козырьки. 3 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'Острые козырьки, peaky blinders, смотреть, онлайн, бесплатно, в хорошем качестве, 3 сезон, все сезоны',
   },
   {
     id: 5,
@@ -41,6 +51,8 @@ export const seasons = [
     season: 4,
     episodes: 6,
     serialLink: 'peaky_blinders',
+    description: 'Острые козырьки. 4 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'Острые козырьки, peaky blinders, смотреть, онлайн, бесплатно, в хорошем качестве, 4 сезон, все сезоны',
   },
   {
     id: 6,
@@ -48,6 +60,8 @@ export const seasons = [
     season: 5,
     episodes: 6,
     serialLink: 'peaky_blinders',
+    description: 'Острые козырьки. 5 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'Острые козырьки, peaky blinders, смотреть, онлайн, бесплатно, в хорошем качестве, 5 сезон, все сезоны',
   },
   {
     id: 7,
@@ -55,6 +69,8 @@ export const seasons = [
     season: 6,
     episodes: 6,
     serialLink: 'peaky_blinders',
+    description: 'Острые козырьки. 6 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'Острые козырьки, peaky blinders, смотреть, онлайн, бесплатно, в хорошем качестве, 6 сезон, все сезоны',
   },
 
   {
@@ -63,6 +79,8 @@ export const seasons = [
     season: 1,
     episodes: 9,
     serialLink: 'vikings',
+    description: 'Викинги. 1 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'викинги, vikings, смотреть, онлайн, бесплатно, в хорошем качестве, 1 сезон, все сезоны',
   },
   {
     id: 9,
@@ -70,6 +88,8 @@ export const seasons = [
     season: 2,
     episodes: 10,
     serialLink: 'vikings',
+    description: 'Викинги. 2 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'викинги, vikings, смотреть, онлайн, бесплатно, в хорошем качестве, 2 сезон, все сезоны',
   },
   {
     id: 10,
@@ -77,6 +97,8 @@ export const seasons = [
     season: 3,
     episodes: 10,
     serialLink: 'vikings',
+    description: 'Викинги. 3 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'викинги, vikings, смотреть, онлайн, бесплатно, в хорошем качестве, 3 сезон, все сезоны',
   },
   {
     id: 11,
@@ -84,6 +106,8 @@ export const seasons = [
     season: 4,
     episodes: 20,
     serialLink: 'vikings',
+    description: 'Викинги. 4 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'викинги, vikings, смотреть, онлайн, бесплатно, в хорошем качестве, 4 сезон, все сезоны',
   },
   {
     id: 12,
@@ -91,6 +115,8 @@ export const seasons = [
     season: 5,
     episodes: 20,
     serialLink: 'vikings',
+    description: 'Викинги. 5 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'викинги, vikings, смотреть, онлайн, бесплатно, в хорошем качестве, 5 сезон, все сезоны',
   },
   {
     id: 13,
@@ -98,5 +124,7 @@ export const seasons = [
     season: 6,
     episodes: 20,
     serialLink: 'vikings',
+    description: 'Викинги. 6 сезон смотреть онлайн в хорошем качесте',
+    keywords: 'викинги, vikings, смотреть, онлайн, бесплатно, в хорошем качестве, 6 сезон, все сезоны',
   },
 ];
