@@ -1,5 +1,5 @@
 import { Root } from './styles';
-import { Header } from '../'
+import { Header } from '..'
 
 function Layout({ children }) {
   return (

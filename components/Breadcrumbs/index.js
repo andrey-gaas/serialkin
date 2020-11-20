@@ -1,4 +1,4 @@
-import BreadcrumbsComponent from './breadcrumbs';
+import BreadcrumbsComponent from './Breadcrumbs';
 
 function Breadcrumbs(props) {
   return <BreadcrumbsComponent {...props} />
