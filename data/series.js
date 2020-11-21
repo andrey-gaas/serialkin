@@ -5,7 +5,7 @@ export const series = [
     season: 1,
     number: 1,
     title: 'Такая игра',
-    link: '/video/olya.mp4',
+    link: '/video/rick.mp4',
   },
   {
     id: 1,
@@ -21,7 +21,7 @@ export const series = [
     season: 1,
     number: 3,
     title: 'Получи!',
-    link: '/video/olya.mp4',
+    link: '/video/rick.mp4',
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const series = [
     season: 1,
     number: 5,
     title: 'Полезно для души',
-    link: '/video/olya.mp4',
+    link: '/video/rick.mp4',
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ export const series = [
     season: 1,
     number: 7,
     title: 'Общество самосохранения',
-    link: '/video/olya.mp4',
+    link: '/video/rick.mp4',
   },
   {
     id: 7,
@@ -70,7 +70,7 @@ export const series = [
     season: 2,
     number: 1,
     title: 'Грандиозная поездка',
-    link: '/video/olya.mp4',
+    link: '/video/rick.mp4',
   },
   {
     id: 9,
@@ -86,7 +86,7 @@ export const series = [
     season: 2,
     number: 3,
     title: 'За холмом с мечами тысячи мужчин',
-    link: '/video/olya.mp4',
+    link: '/video/rick.mp4',
   },
   {
     id: 1,
@@ -102,7 +102,7 @@ export const series = [
     season: 2,
     number: 5,
     title: 'Нам пора идти',
-    link: '/video/olya.mp4',
+    link: '/video/rick.mp4',
   },
   {
     id: 13,
@@ -118,7 +118,7 @@ export const series = [
     season: 2,
     number: 7,
     title: 'Мясник, пекарь, производитель подсвечников',
-    link: '/video/olya.mp4',
+    link: '/video/rick.mp4',
   },
   {
     id: 15,
