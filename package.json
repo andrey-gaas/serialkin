@@ -8,6 +8,8 @@
     "start": "next start -p 80"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "mongoose": "^5.12.1",
     "next": "9.5.5",
     "node-fetch": "^2.6.1",
     "react": "17.0.0",

@@ -1,9 +1,10 @@
 import Head from 'next/head';
-import { serials } from '../data/serials';
 import { Layout } from '../components';
 import { Home as HomeComponent } from '../views';
 
-function Home() {
+function Home(props) {
+  const { serials } = props;
+
   return (
     <>
       <Head>
@@ -20,5 +21,19 @@ function Home() {
     </>
   );
 }
+
+export async function getServerSideProps() {
+  const res = await fetch('http://localhost:3000/api/serials');
+  const data = await res.json();
+  
+  if (data.success) {
+    return {
+      props: { serials: data.data },
+    };
+  }
+
+  return { props: { serials: [] } };
+
+};
 
 export default Home;
