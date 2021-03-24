@@ -13,8 +13,8 @@ function Season({ serial, season, series, seria, ...rest }) {
       link: `/serial/${serial.link}`,
     },
     {
-      title: `Сезон ${season}`,
-      link: `/serial/${serial.link}`,
+      title: `Сезон ${season.season}`,
+      link: `/serial/${serial.link}/${season.season}?seria=${seria}`,
     },
   ];
 
@@ -23,7 +23,7 @@ function Season({ serial, season, series, seria, ...rest }) {
 
 Season.propTypes = {
   serial: PropTypes.object.isRequired,
-  season: PropTypes.string.isRequired,
+  season: PropTypes.object.isRequired,
   series: PropTypes.array.isRequired,
   seria:  PropTypes.string.isRequired,
 };

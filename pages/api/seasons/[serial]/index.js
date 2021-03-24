@@ -1,5 +1,5 @@
-import dbConnect from '../../../db/connect';
-import Season from '../../../db/models/season';
+import dbConnect from '../../../../db/connect';
+import Season from '../../../../db/models/season';
 
 export default async function handler(req, res) {
   const {

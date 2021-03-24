@@ -4,20 +4,15 @@ import { seasons } from '../../../../data/seasons';
 import { series as seriesData } from '../../../../data/series';
 import { Layout } from '../../../../components';
 import { Season as SeasonView } from '../../../../views';
+import { apiUrl } from '../../../../config';
 
-function Season({ serial: serialProps, season, seria = '1' }) {
-  const serial = serials.find(serial => serial.link === serialProps);
-  const series = seriesData.filter(seria => seria.serial === serial.title && seria.season === +season);
-  const { description, keywords } = seasons
-    .filter(item => item.serial === serial.title)
-    .find(item => item.season === +season);
-
+function Season({ serial, season, series, seria = '1'}) {
   return (
     <>
       <Head>
-        <title>{serial.title} {season} сезон смотреть | Serialkin</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
+        <title>{serial.title} {season.season} сезон смотреть | Serialkin</title>
+        <meta name="description" content={season.description} />
+        <meta name="keywords" content={season.keywords} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans:400,700&display=swap" rel="stylesheet" />
@@ -31,8 +26,38 @@ function Season({ serial: serialProps, season, seria = '1' }) {
 }
 
 export async function getServerSideProps({ req, query }) {
+  const seasonResult = await fetch(`${apiUrl}/api/seasons/${query.serial}/${query.season}`);
+  const seasonData = await seasonResult.json();
+
+  const serialResult = await fetch(`${apiUrl}/api/serials/${query.serial}`);
+  const serialData = await serialResult.json();
+
+  const seriesResult = await fetch(`${apiUrl}/api/series/${query.serial}/${query.season}`);
+  const seriesData = await seriesResult.json();
+
+  let season = {};
+  let serial = {};
+  let series = [];
+
+  if (seasonData.success) {
+    season = seasonData.data;
+  }
+
+  if (serialData.success) {
+    serial = serialData.data;
+  }
+
+  if (seriesData.success) {
+    series = seriesData.data;
+  }
+
   return {
-    props: query,
+    props: {
+      serial,
+      season,
+      series,
+      seria: query.seria,
+    },
   };
 };
 
