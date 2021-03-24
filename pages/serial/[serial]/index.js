@@ -1,13 +1,9 @@
 import Head from 'next/head';
-import { serials } from '../../../data/serials';
-import { seasons as allSeasons } from '../../../data/seasons';
 import { Layout } from '../../../components';
 import { Serial as SerialView } from '../../../views';
+import { apiUrl } from '../../../config';
 
-function Serial({ serial: serialProps }) {
-  const serial = serials.find(serial => serial.link === serialProps);
-
-  const seasons = allSeasons.filter(season => season.serial === serial.title);
+function Serial({ serial, seasons }) {
 
   return (
     <>
@@ -27,8 +23,28 @@ function Serial({ serial: serialProps }) {
 }
 
 export async function getServerSideProps({ req, query }) {
+  const seasonsResult = await fetch(`${apiUrl}/api/seasons/${query.serial}`);
+  const seasonsData = await seasonsResult.json();
+
+  const serialResult = await fetch(`${apiUrl}/api/serials/${query.serial}`);
+  const serialData = await serialResult.json();
+
+  let seasons = [];
+  let serial = {};
+
+  if (seasonsData.success) {
+    seasons = seasonsData.data;
+  }
+
+  if (serialData.success) {
+    serial = serialData.data;
+  }
+
   return {
-    props: query,
+    props: {
+      serial,
+      seasons,
+    },
   };
 };
 

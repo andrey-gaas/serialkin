@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Layout } from '../components';
 import { Home as HomeComponent } from '../views';
+import { apiUrl } from '../config';
 
 function Home(props) {
   const { serials } = props;
@@ -23,7 +24,7 @@ function Home(props) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/serials');
+  const res = await fetch(`${apiUrl}/api/serials`);
   const data = await res.json();
   
   if (data.success) {
