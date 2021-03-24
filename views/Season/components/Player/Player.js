@@ -14,11 +14,14 @@ import {
   SeriaText,
 } from './styles';
 
-function Player({ serial, url, series, isOpenMenu, switchMenu, switchSeria }) {
+function Player({ serial, url, title, series, isOpenMenu, switchMenu, switchSeria }) {
   return (
     <Root>
       <PlayerContainer>
-        <Header>{serial}</Header>
+        <Header>
+          <span>{serial}</span>
+          <span>{title}</span>
+        </Header>
         <PlayerReact
           url={url}
           width="100%"
@@ -81,6 +84,7 @@ Player.propTypes = {
   serial:      PropTypes.string.isRequired,
   series:      PropTypes.array.isRequired,
   url:         PropTypes.string.isRequired,
+  title:       PropTypes.string.isRequired,
   isOpenMenu:  PropTypes.bool.isRequired,
   switchMenu:  PropTypes.func.isRequired,
   switchSeria: PropTypes.func.isRequired,

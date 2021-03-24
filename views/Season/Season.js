@@ -36,6 +36,8 @@ function Season({ breadcrumbs, series, seria: seriaProps }) {
     });
   };
 
+  console.log(seria);
+
   return (
     <Container>
       <Breadcrumbs data={breadcrumbs} />
@@ -44,6 +46,7 @@ function Season({ breadcrumbs, series, seria: seriaProps }) {
         url={seria.link}
         series={series}
         switchSeria={switchSeria}
+        title={seria.title}
       />
     </Container>
   );
