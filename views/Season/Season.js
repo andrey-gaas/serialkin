@@ -36,8 +36,6 @@ function Season({ breadcrumbs, series, seria: seriaProps }) {
     });
   };
 
-  console.log(seria);
-
   return (
     <Container>
       <Breadcrumbs data={breadcrumbs} />
@@ -47,6 +45,7 @@ function Season({ breadcrumbs, series, seria: seriaProps }) {
         series={series}
         switchSeria={switchSeria}
         title={seria.title}
+        active={seria.id}
       />
     </Container>
   );

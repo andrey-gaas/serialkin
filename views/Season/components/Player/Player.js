@@ -14,7 +14,7 @@ import {
   SeriaText,
 } from './styles';
 
-function Player({ serial, url, title, series, isOpenMenu, switchMenu, switchSeria }) {
+function Player({ active, serial, url, title, series, isOpenMenu, switchMenu, switchSeria }) {
   return (
     <Root>
       <PlayerContainer>
@@ -39,7 +39,7 @@ function Player({ serial, url, title, series, isOpenMenu, switchMenu, switchSeri
           <div>
             {
               series.map(seria => (
-                <Seria key={seria.id} onClick={() => switchSeria(seria.number)}>
+                <Seria key={seria.id} onClick={() => switchSeria(seria.number)} active={seria.id === active}>
                   <SeriaText>Серия {seria.number}.</SeriaText>
                   &#8195;
                   <SeriaText>{seria.title}</SeriaText>
@@ -81,6 +81,7 @@ function Player({ serial, url, title, series, isOpenMenu, switchMenu, switchSeri
 }
 
 Player.propTypes = {
+  active:      PropTypes.number.isRequired,
   serial:      PropTypes.string.isRequired,
   series:      PropTypes.array.isRequired,
   url:         PropTypes.string.isRequired,

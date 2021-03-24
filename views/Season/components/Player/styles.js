@@ -68,7 +68,7 @@ export const SeriesList = styled.div`
 export const Seria = styled.div`
   padding: 8px 20px;
 
-  background: ${LIGHT_PRIMARY_COLOR};
+  background: ${props => props.active ? '#1a143b': LIGHT_PRIMARY_COLOR};
   border-bottom: 1px solid #000;
   cursor: pointer;
   transition: .1s;
