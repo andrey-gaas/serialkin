@@ -4,7 +4,7 @@ import { SECONDARY_COLOR, LIGHT_PRIMARY_COLOR } from '../../../../constants/styl
 export const Root = styled.section`
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  flex-grow: 1;
 `;
 
 export const Header = styled.header`

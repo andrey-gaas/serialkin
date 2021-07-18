@@ -6,7 +6,7 @@ import { Layout } from '../../../../components';
 import { Season as SeasonView } from '../../../../views';
 import { apiUrl } from '../../../../config';
 
-function Season({ serial, season, series, seria = '1'}) {
+function Season({ serial, season, series, seria = '1', seeAlso}) {
   return (
     <>
       <Head>
@@ -19,7 +19,7 @@ function Season({ serial, season, series, seria = '1'}) {
       </Head>
       
       <Layout>
-        <SeasonView serial={serial} series={series} season={season} seria={seria} />
+        <SeasonView serial={serial} series={series} season={season} seria={seria} seeAlso={seeAlso} />
       </Layout>
     </>
   );
@@ -35,9 +35,13 @@ export async function getServerSideProps({ req, query }) {
   const seriesResult = await fetch(`${apiUrl}/api/series/${query.serial}/${query.season}`);
   const seriesData = await seriesResult.json();
 
+  const seeAlsoResult = await fetch(`${apiUrl}/api/see-also/${serialData.data.link}`);
+  const seeAlsoData = await seeAlsoResult.json();
+
   let season = {};
   let serial = {};
   let series = [];
+  let seeAlso = [];
 
   if (seasonData.success) {
     season = seasonData.data;
@@ -51,12 +55,17 @@ export async function getServerSideProps({ req, query }) {
     series = seriesData.data;
   }
 
+  if (seeAlsoData.success) {
+    seeAlso = seeAlsoData.data;
+  }
+
   return {
     props: {
       serial,
       season,
       series,
       seria: query.seria,
+      seeAlso,
     },
   };
 };

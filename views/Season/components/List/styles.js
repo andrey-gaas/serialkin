@@ -17,6 +17,10 @@ export const Seria = styled.div`
   &:hover {
     background: ${SECONDARY_COLOR};
   }
+
+  &:last-child {
+    border-bottom: none;
+  }
 `;
 
 export const Text = styled.span`

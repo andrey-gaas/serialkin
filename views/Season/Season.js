@@ -4,10 +4,10 @@ import Icon from 'react-icons-kit';
 import { chevronDown } from 'react-icons-kit/fa/chevronDown';
 import { chevronUp } from 'react-icons-kit/fa/chevronUp';
 import { Container, Breadcrumbs } from '../../components';
-import { Player, Header, List } from './components';
-import { Grid, ContentContainer, SideContainerDesctop, BottomContainerMobile } from './styles';
+import { Player, Header, List, SeeAlso } from './components';
+import { Grid, ContentContainer, SideContainerDesctop, BottomContainerMobile, ListContainer } from './styles';
 
-function Season({ breadcrumbs, seria, switchSeria, series, ...rest }) {
+function Season({ breadcrumbs, seria, switchSeria, series, seeAlso }) {
   const [isOpen, setOpen] = useState(false);
   const switchMenu = () => setOpen(!isOpen);
 
@@ -23,10 +23,14 @@ function Season({ breadcrumbs, seria, switchSeria, series, ...rest }) {
           <Player url={seria.link} />
         </ContentContainer>
         <SideContainerDesctop>
-          <Header>
-            Список серий
-          </Header>
-          <List series={series} switchSeria={switchSeria} active={seria.id} />
+          <ListContainer>
+            <Header>
+              Список серий
+            </Header>
+            <List series={series} switchSeria={switchSeria} active={seria.id} />
+          </ListContainer>
+
+          <SeeAlso list={seeAlso} />
         </SideContainerDesctop>
 
         <BottomContainerMobile>
@@ -49,6 +53,7 @@ Season.propTypes = {
   breadcrumbs: PropTypes.array.isRequired,
   series:      PropTypes.array.isRequired,
   seria:       PropTypes.object.isRequired,
+  seeAlso:     PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Season;

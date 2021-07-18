@@ -32,7 +32,6 @@ export const SideContainerDesctop = styled.div`
   margin-left: 20px;
   width: 500px;
   max-height: 470px;
-  border: 1px solid #000;
 
   @media (min-width: 990px) {
     display: flex;
@@ -48,4 +47,8 @@ export const BottomContainerMobile = styled.div`
   @media (min-width: 990px) {
     display: none;
   }
+`;
+
+export const ListContainer = styled.div`
+  border: 1px solid #000;
 `;

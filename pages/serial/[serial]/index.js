@@ -3,7 +3,7 @@ import { Layout } from '../../../components';
 import { Serial as SerialView } from '../../../views';
 import { apiUrl } from '../../../config';
 
-function Serial({ serial, seasons }) {
+function Serial({ serial, seasons, seeAlso }) {
 
   return (
     <>
@@ -16,7 +16,7 @@ function Serial({ serial, seasons }) {
         <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700|Open+Sans:400,700&display=swap" rel="stylesheet" />
       </Head>
       <Layout>
-        <SerialView serial={serial} seasons={seasons} />
+        <SerialView serial={serial} seasons={seasons} seeAlso={seeAlso} />
       </Layout>
     </>
   );
@@ -29,8 +29,12 @@ export async function getServerSideProps({ req, query }) {
   const serialResult = await fetch(`${apiUrl}/api/serials/${query.serial}`);
   const serialData = await serialResult.json();
 
+  const seeAlsoResult = await fetch(`${apiUrl}/api/see-also/${serialData.data.link}`);
+  const seeAlsoData = await seeAlsoResult.json();
+
   let seasons = [];
   let serial = {};
+  let seeAlso = [];
 
   if (seasonsData.success) {
     seasons = seasonsData.data;
@@ -40,10 +44,15 @@ export async function getServerSideProps({ req, query }) {
     serial = serialData.data;
   }
 
+  if (seeAlsoData.success) {
+    seeAlso = seeAlsoData.data;
+  }
+
   return {
     props: {
       serial,
       seasons,
+      seeAlso,
     },
   };
 };

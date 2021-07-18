@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
 import { Container, Breadcrumbs } from '../../components';
-import { Header, Seasons } from './components';
+import { Header, Seasons, SeeAlso } from './components';
+import { Grid } from './styles';
 
-function Serial({ breadcrumbs, serial, seasons }) {
+function Serial({ breadcrumbs, serial, seasons, seeAlso }) {
+
   return (
     <Container>
       <Breadcrumbs data={breadcrumbs} />
       <Header title={serial.title} image={serial.poster} />
-      <Seasons seasons={seasons} />
+      <Grid>
+        <Seasons seasons={seasons} />
+        <SeeAlso list={seeAlso} />
+      </Grid>
     </Container>
   );
 }
