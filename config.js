@@ -1,1 +1,1 @@
-export const apiUrl = process.env.NODE_ENV === 'production' ? 'http://serialkin.ru' : 'http://localhost:3000';
+export const apiUrl = process.env.NODE_ENV === 'production' ? 'http://vm2485054.32ssd.had.wf' : 'http://localhost:3000';
